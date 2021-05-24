@@ -21,7 +21,7 @@ steps:
   - docker build . -t ez-cicd-demo:"${DRONE_COMMIT_SHA:0:8}"
 - name: stop docker image
   commands:
-  - docker rm -f ez-cicd-demo
+  - docker rm -f ez-cicd-demo || echo nope
 - name: start docker image
   commands:
   - docker run -p 80:80 -p 443:443 -d --restart=always -d --name=ez-cicd-demo ez-cicd-demo:"${DRONE_COMMIT_SHA:0:8}"
