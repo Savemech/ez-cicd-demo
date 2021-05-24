@@ -10,7 +10,7 @@ platform:
 steps:
 - name: make sure packages installed
   commands:
-    apt install -y git build-essential
+  - apt install -y git build-essential
 - name: pull code
   commands:
   - cd /root/workbench
