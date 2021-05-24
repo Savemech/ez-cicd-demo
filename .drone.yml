@@ -14,6 +14,7 @@ steps:
 - name: pull code
   commands:
   - cd /root/workbench
+  - rm -rf ez-cicd-demo
   - git clone https://github.com/Savemech/ez-cicd-demo.git
 - name: build new docker image
   commands:
